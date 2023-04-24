@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsappBan</title>
+    <head>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        
+    
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #23242a 
+         }
+        div{
+            background-color: rgba(0, 0, 0, 0.9);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 80px;
+            border-radius: 15px;
+            color: #fffb;
+        }
+        input{
+            padding: 15px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+        a{
+            background-color: #45f3ff;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 6px;
+            color: white;
+            font-size: 15px;
+            
+        }
+        button:hover{
+            background-color: deepskyblue;
+            cursor: pointer;
+        }
+    
+    
+    
+        #loading {
+  position: absolute;
+  top: 7%;
+  left: 45%;
+  transform: translate(-50%,-50%);
+  font-size: 3em;
+  color: #45f3ff;
+  opacity: 0;
+}
+
+
+        @keyframes spin {
+            to {
+                transform: rotate(10deg);
+            }
+        }
+    
+    </style>
+
+</head>
+<body>
+    <div>
+        <h1>Coloque o número</h1>
+        <input type="text" placeholder="número">
+        <br><br>
+        <a href="main.html" id="banir">BANIR O NUMERO</a>
+        <i class="fas fa-spinner fa-spin" id="loading"></i>
+        <div id="loading"> </div>
+
+        <script>
+            // adiciona o evento de clique ao botão
+            document.getElementById("banir").addEventListener("click", function(event){
+                // impede o link de redirecionar a uma página diferente
+                event.preventDefault();
+                // torna o elemento de loading visível
+                document.getElementById("loading").style.opacity = "1";
+                // simula um atraso de 2 segundos para fins de demonstração
+                setTimeout(function(){
+                    // redireciona o usuário para a página principal
+                    window.location.href = "banido.html";
+                }, 2000);
+            });
+        </script>
+    </body>
+    </html>

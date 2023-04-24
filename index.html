@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>PAINEL DE ELITE</title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="box">
+		<form action="main.html" autocomplete="off" id="login-form">
+			<h2>ACESSE O PAINEL</h2>
+			<div class="inputBox">
+				<input type="text" required="required" id="login">
+				<span>Usuario</span>
+				<i></i>
+			</div>
+			<div class="inputBox">
+				<input type="password" required="required" id="senha">
+				<span>senha</span>
+				<i></i>
+			</div>
+			<input type="submit" onclick="logar(); return false">
+
+			<script>
+
+
+				function logar(){
+		
+					var login = document.getElementById('login').value;
+					var senha = document.getElementById('senha').value;
+		
+					if(login == "admin" && senha == "admin171"){
+						alert('Logado com sucesso, aproveite o Painel');
+						location.href = "main.html";
+					}else{
+						alert('Usuario ou senha incorretos, chama o @Gokuzin171 no telegram');
+					}
+		
+				}
+		
+			</script>
+		</form>
+	</div>
+</body>
+</html>
